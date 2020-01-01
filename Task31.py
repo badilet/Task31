@@ -1,9 +1,10 @@
 # Напишите функцию которая подсчитает количество строк, слов и букв в текстовом файле.
-def counter():
-    text = input("Enter a large text: ")
-    print("Number of lines: ", len(text.split('.')))
-    print("Number of words: ", len(text.split())+1)
-    print("Number of letters: ", len(text))
 
+file = open("Task31.txt", "r")
+data = file.read()
+words = data.split()
+num_lines = sum(1 for line in open('Task31.txt'))
 
-counter()
+print('Number of lines in text: ', num_lines)
+print('Number of words in text: ', len(words))
+print('Number of letters inn text: ', len(data))
